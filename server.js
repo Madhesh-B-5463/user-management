@@ -5,7 +5,7 @@ const cors = require('cors');
 const fs = require('fs');
 
 App.use(cors({
-  origin: 'http://localhost:3000'
+  origin: 'https://users-manage.netlify.app/'
 }));
 
 App.options('*' , cors());
@@ -86,4 +86,5 @@ const PORT = process.env.PORT || 3000;
 App.listen(PORT , () => {
   console.log(`Server running on port ${PORT}`);
 });
+
 
