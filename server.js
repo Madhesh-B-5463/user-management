@@ -4,6 +4,8 @@ const path = require('path');
 const cors = require('cors');
 const fs = require('fs');
 
+App.options('*' , cors());
+
 App.use(cors({
   origin: 'http://localhost:3000'
 }));
