@@ -4,11 +4,11 @@ const path = require('path');
 const cors = require('cors');
 const fs = require('fs');
 
-App.options('*' , cors());
-
 App.use(cors({
   origin: 'http://localhost:3000'
 }));
+
+App.options('*' , cors());
 
 App.use(express.json());
 
@@ -86,3 +86,4 @@ const PORT = process.env.PORT || 3000;
 App.listen(PORT , () => {
   console.log(`Server running on port ${PORT}`);
 });
+
